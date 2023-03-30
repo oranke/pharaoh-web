@@ -1,0 +1,250 @@
+/* 1. 초기화 */
+* {
+    margin: 0; padding: 0;
+    /*
+    font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif; 
+
+#1D99FC    
+#647E97
+#555F69
+#67727D
+#414B55
+#38424A
+    */
+}
+
+
+::-webkit-scrollbar {
+    width: .5em;
+    height: .5em
+}
+::-webkit-scrollbar-button {
+    background: #555F69;
+    height: 0px;
+}
+::-webkit-scrollbar-track-piece {
+    background: #414B55;
+}
+::-webkit-scrollbar-thumb {
+    background: #555F69;
+    border-radius: 3px; 
+}​
+
+
+a { text-decoration: none; }
+li { list-style: none; }
+
+.hidden {display: none; }
+
+#page-wrapper, #main-header, #main-content, #main-footer, 
+#buttons-area, #view-area, #full-overay-panel, #game-overay-panel,
+#lbl-level, #lbl-moves, #status-div {
+    position: absolute;
+    /*
+    overflow: hidden; 
+    */
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */    
+}
+
+.titleless_dlg { 
+    height: 100; 
+    text-align: center; 
+    line-height: 1.3em; 
+}
+/*
+#dialog-message {
+    vertical-align: middle;
+}
+
+#dialog-message.p {
+    line-height: 10px; 
+}
+*/
+
+hr.seperator {
+    height: 10px; 
+    border: 0px; 
+}
+
+
+/* 2. 페이지 구성 */
+
+html {
+    /*
+    padding-bottom: 400px;
+    */
+    background: rgb(33, 39, 44);
+}
+
+body {
+    width: 960px; 
+    /*height: 100vh; */
+    margin: 0 auto; 
+    background: rgb(33, 39, 44);
+    background-attachment: fixed;
+
+}
+#page-wrapper {
+    background: #414B55; 
+    /*height: 85%;*/
+    /*height: 85%; */
+    margin: 10px 10px; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(100, 100, 100, 0.3); 
+    left: 0; right: 0; 
+    top: 0; bottom: 0; 
+}
+
+/* 3. 헤더 구성 */
+#main-header {
+    color: white; 
+    margin: 5px 10px;
+    padding: 0px 10px; 
+    left: 0; right: 0;
+    height: 40px;
+    text-shadow: 0 0 5px black, 0 0 15px black;
+
+    /*
+    border: 1px solid blue; 
+    */
+}
+
+/*
+#main-header.h1 {
+    font-size: 30px;
+    color: white; 
+}
+*/
+
+#main-header.p {
+    font-size: 15px; font-weight: 500; 
+    text-align: center; 
+    color: white;
+}
+
+#fullscr {
+    font-size: 10px;
+
+    /*
+    width: 10px;  
+    height: 10px;  
+    */
+}
+
+/* 4. 본문영역 */
+
+#main-content {
+    margin: 7px 20px;
+    left: 0; right: 0; 
+    top: 50px; bottom: 10px; 
+    /*
+    border: 1px solid red; 
+    */
+}
+
+#buttons-area {
+    width: 130px; 
+    height: 100%;
+    margin: 0px, 0px;
+    padding: 0px 5px; 
+    overflow-y: scroll; 
+    line-height: 2.5em; 
+    /*
+    padding-right: 17px;
+    background: #67727D; 
+    overflow-x: scroll;
+    background: rgb(216, 228, 255); 
+    */
+}
+
+.half-rd {
+    width: 20px;  
+}
+
+.full-rd {
+    width: 80px; 
+}
+
+.full-btn {
+    width: 114px; 
+}
+
+
+
+#view-area {
+    left: 140px; 
+    right: 0px; 
+    height: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px; 
+    background: rgb(33, 39, 44);
+    /*
+    border: 1px solid rgb(100, 100, 100); 
+    background: rgb(34, 0, 78);
+    background: black;
+    */
+}
+
+#canvas {
+    border: 0px none; 
+    width: 100%;
+    height: 100%; 
+    margin: 0px 0px;
+    /*
+    background-color: black;
+    width: 100%;
+    height: 100%; 
+    */
+}
+
+#lbl-level {
+    color: white;
+    left: 0.5em;
+    top: 0.5em;
+    text-shadow: 0 0 5px black, 0 0 8px black;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+#lbl-moves {
+    color: white;
+    left: 0.5em;
+    top: 2em;
+    text-shadow: 0 0 5px black, 0 0 8px black;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+#status-div {
+    color: white;
+    left : 0.5em;
+    bottom: 0.5em; 
+    text-shadow: 0 0 5px black, 0 0 8px black;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+/* 5. 바닥글 */
+#main-footer {
+    margin: 10px 20px;
+    padding: 10px 10px; 
+    left: 0; right: 0;
+    bottom: 0; 
+    height: 10px;
+    /*
+    border: 1px solid blue; 
+    */
+
+}
+
+#full-overay-panel, #game-overay-panel {
+    left:0; right: 0; top: 0; bottom: 0; 
+}
